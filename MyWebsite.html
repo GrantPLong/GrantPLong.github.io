@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grant P Long</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            #intro {
+                position: relative;
+                padding: 30px 100px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            #intro::before {
+                content: '';
+                position: absolute;
+                top: 0; left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url('maipo.jpeg');
+                background-attachment: fixed;
+                background-size: cover;
+                background-position: center;
+                filter: grayscale(100%);
+                opacity: 0.2;
+                z-index: 0;
+            }
+
+            #intro > * {
+                position: relative;
+                z-index: 1;
+            }
+
+            #intro div { max-width: 800px; }
+            #intro a { color: black; }
+
+            #intro img {
+                width: 900px;
+                box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.4);
+            }
+
+            #publications, #research, #resources {
+                padding: 10px;
+                background-color: white;
+                text-align: center;
+                font-family: 'Georgia', serif;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav id="navbar">
+            <b class="nav-name">Grant P Long</b>
+            <a class="nav-home" href="MyWebsite.html">Home</a>
+            <a class="nav-cv" href="CV.html">CV</a>
+            <a class="nav-research" href="Research.html">Research</a>
+            <a class="nav-photos" href="Photos.html">Field Photos</a>
+        </nav>
+        <button id="topbutton">↑</button>
+
+        <div id="intro">
+            <img src="Grant_capitol_reef.jpg" alt="Grant">
+            <div>
+                <p>Grant Long is a Tectonic Geomorphologist with interests in the dynamics of collisional margins and the role in shaping landscapes 
+                    over geologic timescales. His primary research interests lie at the intersection of climate and tectonics, where he explores 
+                    how these forces drive change in Earth's topography. His research approach is highly field-oriented, involving intensive field seasons 
+                    to gather samples. He is also passionate about the outdoors participating in skiing, climbing, hiking, biking, and anything to get outside.</p>
+                <p>Currently a PhD student at Stanford University.</p>
+                <p><span class="bold">Contact: <a href="mailto:glong1@stanford.edu">glong1@stanford.edu</a> (he/him)</span></p>
+                <p><a href="https://scholar.google.com/citations?user=y8t561kAAAAJ&hl=en">Google Scholar</a></p>
+            </div>
+        </div>
+
+        <div id="basebar">
+            <a class="base-buttons" href="MyWebsite.html">Home</a>
+            <a class="base-buttons" href="CV.html">CV</a>
+            <a class="base-buttons" href="Research.html">Research</a>
+            <a class="base-buttons" href="Photos.html">Field Photos</a>
+            <a class="base-buttons" href="mailto:glong1@stanford.edu">Email</a>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

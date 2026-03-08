@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Field Photos – Grant P Long</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+            }
+
+            h1 {
+                font-family: 'Georgia', serif;
+                font-size: 80px;
+                text-align: center;
+            }
+
+            p { text-align: center; }
+
+            #gallery {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+                padding: 20px;
+            }
+
+            #gallery img {
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+                box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+                cursor: pointer;
+            }
+
+            #lightbox {
+                display: none;
+                position: fixed;
+                top: 0; left: 0;
+                width: 100%; height: 100%;
+                background-color: rgba(0,0,0,0.9);
+                z-index: 1000;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #lightbox img {
+                max-width: 90%;
+                max-height: 90%;
+                box-shadow: none;
+            }
+        </style>
+    </head>
+    <body>
+        <nav id="navbar">
+            <b class="nav-name">Grant P Long</b>
+            <a class="nav-home" href="MyWebsite.html">Home</a>
+            <a class="nav-cv" href="CV.html">CV</a>
+            <a class="nav-research" href="Research.html">Research</a>
+            <a class="nav-photos" href="Photos.html">Field Photos</a>
+        </nav>
+        <button id="topbutton">↑</button>
+
+        <div id="lightbox">
+            <img id="lightbox-img" src="" alt="">
+        </div>
+
+        <div>
+            <h1>Field Photos</h1>
+            <p>Click to enlarge, click again to exit</p>
+        </div>
+
+        <div id="gallery">
+            <img src="photos/20240512_165323.jpg" alt="Field photo">
+            <img src="photos/20240523_164433.jpg" alt="Field photo">
+            <img src="photos/20240511_174733.jpg" alt="Field photo">
+            <img src="photos/20240604_174828.jpg" alt="Field photo">
+            <img src="photos/20240616_161959.jpg" alt="Field photo">
+            <img src="photos/20240512_102723.jpg" alt="Field photo">
+            <img src="photos/20240516_154726.jpg" alt="Field photo">
+            <img src="photos/20240524_104853.jpg" alt="Field photo">
+            <img src="photos/20240523_093546.jpg" alt="Field photo">
+            <img src="photos/20240507_174629.jpg" alt="Field photo">
+            <img src="photos/20240531_175010.jpg" alt="Field photo">
+            <img src="photos/20240509_122600.jpg" alt="Field photo">
+            <img src="photos/20240508_122859.jpg" alt="Field photo">
+            <img src="photos/20240507_104235.jpg" alt="Field photo">
+            <img src="photos/20240604_173723.jpg" alt="Field photo">
+        </div>
+
+        <div id="basebar">
+            <a class="base-buttons" href="MyWebsite.html">Home</a>
+            <a class="base-buttons" href="CV.html">CV</a>
+            <a class="base-buttons" href="Research.html">Research</a>
+            <a class="base-buttons" href="Photos.html">Field Photos</a>
+            <a class="base-buttons" href="mailto:glong1@stanford.edu">Email</a>
+        </div>
+
+        <script src="script.js"></script>
+        <script>
+            document.querySelectorAll('#gallery img').forEach(function(img) {
+                img.addEventListener('click', function() {
+                    var lightbox = document.getElementById('lightbox');
+                    document.getElementById('lightbox-img').src = this.src;
+                    lightbox.style.display = 'flex';
+                });
+            });
+
+            document.getElementById('lightbox').addEventListener('click', function() {
+                this.style.display = 'none';
+            });
+        </script>
+    </body>
+</html>
