@@ -96,7 +96,7 @@ h1 { color: black; }
     z-index: 200;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 
     /* Navbar stacks vertically */
     #navbar {
@@ -117,7 +117,7 @@ h1 { color: black; }
     }
 
     .nav-home, .nav-cv, .nav-research, .nav-photos {
-        font-size: 16px;
+        font-size: 16px !important;
         padding: 8px;
     }
 
@@ -137,7 +137,7 @@ h1 { color: black; }
     }
 
     .base-buttons {
-        font-size: 16px;
+        font-size: 16px !important;
     }
 
     /* Basebar wraps */
