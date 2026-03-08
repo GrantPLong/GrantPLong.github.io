@@ -104,6 +104,10 @@ h1 { color: black; }
         background-color: rgb(27, 27, 27);
     }
 
+    body {
+        padding-top: 80px;
+    }
+
     #navbar a, #navbar .nav-name {
         color: white;
     }
